@@ -1,7 +1,6 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
+import classes from './Show.module.css';
 import { ShowProps } from "./Shows";
-import classes from './Show.module.css'
- 
 
 const Show = ({
     id,
@@ -12,15 +11,15 @@ const Show = ({
     date
 }: ShowProps): ReactElement => {
     return (
-        <li className={classes.show}>
+     <li className={classes.show}>
         <div>
           <h3>{bandName}</h3>
-          <div className={classes.band}>{location}</div>
+          <div className={classes.location}>{location}</div>
           <div className={classes.venue}>{venueName}</div>
         </div>
-        <div>
+        {/* <div> */}
           {/* <MealItemForm onAddToCart={addToCartHandler} /> */}
-        </div>
+        {/* </div> */}
       </li>
     )
 };

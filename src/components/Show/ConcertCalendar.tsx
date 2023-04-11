@@ -1,7 +1,7 @@
-import { Card } from '@mui/material';
 import React, { ReactElement } from 'react'
+import Card from '../UI/Card';
 import Show from './Show';
-import classes from './UpcomingConcerts.module.css';
+import classes from './ConcertCalendar.module.css';
 
 
 const PLACEHOLDER_DATA = [
@@ -23,7 +23,7 @@ const PLACEHOLDER_DATA = [
     }
 ]
 
-const UpcomingConcerts = (): ReactElement => {
+const ConcertCalendar = (): ReactElement => {
 
     const tempShows = PLACEHOLDER_DATA.map(show => (
         <Show
@@ -44,4 +44,4 @@ const UpcomingConcerts = (): ReactElement => {
     </div>
 };
 
-export default UpcomingConcerts;
+export default ConcertCalendar;
