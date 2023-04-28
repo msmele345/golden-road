@@ -1,4 +1,4 @@
-import React, {useState, useEffect, ReactElement} from "react";
+import React, {useState, useEffect, ReactElement, MutableRefObject} from "react";
 import classes from './BasicInput.module.css';
 
 
@@ -9,13 +9,14 @@ export type Input = {
     step?: string;
     min?: number;
     max?: number;
+    ref?: MutableRefObject<HTMLInputElement>;
     defaultValue?: string | number;
     value: string | number | undefined;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void; 
     onBlur?: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onFocus?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
-
+ 
 export interface BasicInputProps {
     input: Input,
     label: string

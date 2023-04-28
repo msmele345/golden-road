@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 
-type IShow = {
+export type IShow = {
     id: number;
     bandName: string;
     location: string;
